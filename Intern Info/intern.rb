@@ -74,3 +74,6 @@ post '/update/:id' do
 	@kundan = Intern.first(:id => params[:id])
 end
 
+get '/update/:id' do
+	@intern = Intern.first(:id => params[:id])
+end
