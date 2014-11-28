@@ -60,3 +60,6 @@ post '/edit/:id' do
 	end
 end
 
+get '/update/:id' do
+	@intern = Intern.first(:id => params[:id])
+end
