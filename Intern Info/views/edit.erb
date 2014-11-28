@@ -1,0 +1,15 @@
+<p>Are You Redy to Update</p>
+<blockquote><p> <%= @intern.intern_name %></p></blockquote>
+<form action="/edit/<%= @intern.id %>" method="POST">
+	<strong>Name:-</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" value="<%= @intern.intern_name %>" name="intern_name"> <br/><br/>
+
+	<strong>Profile:-</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" value="<%= @intern.profile %>" name="profile"> <br/><br/>
+
+	<strong>Working On:-</strong>&nbsp;&nbsp;&nbsp;
+	<input type="text" value="<%= @intern.working_on %>" name="working_on"> <br/><br/>
+
+	<button type="submit" class="btn btn-primary" name="update">Update</button>
+	<button type="submit" class="btn" name="cancel">Cancel</button>
+</form> 

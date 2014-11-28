@@ -1,0 +1,16 @@
+<ul id="intern-list" class = "unstyled">
+	<% @interns.each do |item| %>
+		<li id="<%= item[:id]%>">
+			<span class="item">
+				<%= item[:done] ? "<del>#{item[:intern_name]}</del>" : item[:intern_name] %>
+				<%= item[:done] ? "<del>#{item[:profile]}</del>" : item[:profile] %>
+				<%= item[:done] ? "<del>#{item[:working_on]}</del>" : item[:working_on] %>
+			</span>
+			<span class = "pull-right">
+				<a href="/edit/<%= item[:id] %>" class="btn btn-danger"> Edit</a>
+				<a href="/delete/<%= item[:id] %>" class="btn btn-danger"> Delete</a> 
+			</span>
+		</li>
+	<% end %>
+</ul>
+<a href="/add_intern" class="btn btn-primary">Add Intern</a>
