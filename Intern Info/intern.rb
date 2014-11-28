@@ -21,23 +21,27 @@ get '/' do
 end
 
 get '/add_intern' do
+#Edited using branch
 	@title = "Add Intern Detail"
 	erb :add_intern
 end
 
 post '/add_intern' do
+#Edited using branch
 	Intern.create(:intern_name => params[:intern_name], :profile => params[:profile], :working_on => params[:working_on], 
 		:created => Time.now)
     redirect '/'
 end
 
 get '/delete/:id' do
+#Edited using branch
 	@intern = Intern.first(:id => params[:id])
 	erb :delete
 end
 
 
 post '/delete/:id' do
+#Edited using branch
 	if params.has_key?("ok")
 		intern = Intern.first(:id => params[:id])
 		intern.destroy
@@ -50,11 +54,13 @@ end
 
 
 get '/edit/:id' do
+#Edited using branch
 	@intern = Intern.first(:id => params[:id])
 	erb :edit 
 end
 
 post '/edit/:id' do
+#Edited using branch
 	if params.has_key?("update")
 		intern = Intern.first(:id => params[:id])
 		intern.update(:intern_name => params[:intern_name], :profile => params[:profile], :working_on => params[:working_on], 
@@ -64,6 +70,7 @@ post '/edit/:id' do
 		redirect '/'
 	end
 post '/update/:id' do	
+#Edited using branch
 	@kundan = Intern.first(:id => params[:id])
 end
 
