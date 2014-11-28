@@ -1,5 +1,7 @@
 require 'sinatra'
 require 'data_mapper'
+#### Changed By me #######
+require 'sibu'
 DataMapper::setup(:default,"sqlite3://#{Dir.pwd}/intern_info.db")
 class Intern
 	include DataMapper::Resource
@@ -34,6 +36,7 @@ get '/delete/:id' do
 	erb :delete
 end
 
+
 post '/delete/:id' do
 	if params.has_key?("ok")
 		intern = Intern.first(:id => params[:id])
@@ -43,6 +46,8 @@ post '/delete/:id' do
 		redirect '/'
 	end
 end
+
+
 
 get '/edit/:id' do
 	@intern = Intern.first(:id => params[:id])
@@ -58,6 +63,8 @@ post '/edit/:id' do
 	else
 		redirect '/'
 	end
+post '/update/:id' do	
+	@kundan = Intern.first(:id => params[:id])
 end
 
 get '/update/:id' do
