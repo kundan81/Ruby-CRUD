@@ -1,7 +1,5 @@
 require 'sinatra'
 require 'data_mapper'
-#### Changed By me #######
-require 'sibu'
 DataMapper::setup(:default,"sqlite3://#{Dir.pwd}/intern_info.db")
 class Intern
 	include DataMapper::Resource
