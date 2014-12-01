@@ -64,6 +64,5 @@ post '/edit/:id' do
 post '/update/:id' do	
 	@kundan = Intern.first(:id => params[:id])
 end
-
 ## haloo 
 ## this is kundan branch
