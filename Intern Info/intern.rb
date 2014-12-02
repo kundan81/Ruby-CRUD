@@ -1,10 +1,14 @@
 require 'sinatra'
 require 'data_mapper'
+<<<<<<< HEAD
 #### Changed By sibu #######
 # Controller Class
 
 DataMapper::setup(:default,"sqlite3://#{Dir.pwd}/intern_sibu_edited.db")
 	
+=======
+DataMapper::setup(:default,"sqlite3://#{Dir.pwd}/intern_info.db")
+>>>>>>> ac77e8421baeb89ffcc7c4b4c98d1099f838fe7f
 class Intern
 	include DataMapper::Resource
 		property :id, Serial
@@ -83,8 +87,13 @@ post '/edit/:id' do
 		redirect '/'
 	end
 end
+<<<<<<< HEAD
 
 
 
 
 
+=======
+## haloo 
+## this is kundan branch
+>>>>>>> ac77e8421baeb89ffcc7c4b4c98d1099f838fe7f
