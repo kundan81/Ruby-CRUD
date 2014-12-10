@@ -1,0 +1,3 @@
+image:
+    absolute_path: 'media/image'
+    link_path:     'public/media/image'

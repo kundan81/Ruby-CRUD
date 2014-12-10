@@ -1,0 +1,16 @@
+<Title>Employee Info<Title>
+
+<form action="/view_image/<%= @internal.id %>" method="post">
+<table border="10">
+<marquee><h1>Hello</h1></marquee>
+	
+<p> Hi <%= @internal.id %></p>
+	<tr>
+	    <td> <img src="#{@internal.image_path}",
+                   alt = "No images",
+                   title = "Image",
+                   width = "50px",
+                   height = "50px"/></td>	
+	</tr>
+</table>
+</form>

@@ -13,18 +13,21 @@
 			<%= item[:done] ? "<del>#{item[:intern_name]}</del>" : item[:intern_name] %> 	
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			
-			<b>Trainer ---></b> <%=item[:done] ?"<del>#{item[:working_with]}</del>" : item[:working_with]%>
-							
-			<span class = "pull-right">
+		<b>Trainer - </b> <b><%=item[:done] ?"<del>#{item[:working_with]}</del>" : item[:working_with]%>
+	<!--	<b>Skills ></b> <%=item[:done] ?"<del>#{item[:skills_Added]}</del>" : item[:skills_Added]%>	
+		--></b>
+		<!--<b>Image </b><%= item[:done]? "<del>#{item.image_add} </del>" :item[:image_add] %> -->
+		
+	<div align="left"><img src= <%= item[:image_add] %> width ="50px" height ="50px alt="<%= item[:id] %>"/></div>			
+				<span class = "pull-right">
 				<a href="/edit/<%= item[:id] %>" class="btn btn-danger"> Edit</a>
 				<a href="/delete/<%= item[:id] %>" class="btn btn-danger"> Delete</a> 
 			</span>	
 		</li>		
 
 			
-<% end %>
+		<% end %>
 
 </td>
 </tr>

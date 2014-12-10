@@ -1,20 +1,43 @@
 <p>Are You Redy to Update</p>
 <blockquote><p> <%= @intern.intern_name %></p></blockquote>
 <form action="/edit/<%= @intern.id %>" method="POST">
-
+<table border="10">
+<tr>
+<td>
 	<strong>Name:-</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="text" value="<%= @intern.intern_name %>" name="intern_name"> <br/><br/>
-
+	<input type="text" value="<%= @intern.intern_name %>" name="intern_name" class="ui-btn"> <br/><br/>
+</td>
+</tr>
+	<td>	
 	<strong>Profile:-</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="text" value="<%= @intern.profile %>" name="profile"> <br/><br/>
-
+	<input type="text" value="<%= @intern.profile %>" name="profile" class="ui-btn" data-icon="star"> <br/><br/>
+	</td>
+<tr>
+	<td>
 	<strong>Working On:-</strong>&nbsp;&nbsp;&nbsp;
-	<input type="text" value="<%= @intern.working_on %>" name="working_on"> <br/><br/>
-
+	<input type="text" value="<%= @intern.working_on %>" name="working_on" class="ui-btn" data-icon="star"> <br/><br/>
+	</td>
+</tr>
+	<td>
 	<strong>Working with:-</strong>&nbsp;&nbsp;&nbsp;
-	<input type="text" value="<%= @intern.working_with %>" name="working_with"> <br/><br/>
-
+	<input type="text" value="<%= @intern.working_with %>" name="working_with" class="ui-btn" data-icon="star"> <br/><br/>
+	</td>
+<tr>
+	<td>
+	<strong>Skills :-</strong>&nbsp;&nbsp;&nbsp;
+	<input type="textarea" placeholder="Enter your Skills" name="Skills_Added" class="ui-btn" data-icon="star"><br/><br/>
+	</td>
+</tr>
+<tr>
+	<td>
+<div class="xs-8">
+	<!--<strong>Picture :-</strong>&nbsp;&nbsp;&nbsp;
+	<! --<input type="file" name="pic" accept="image/*" value="<%=@intern.image_add %>"> -->
 	<button type="submit" class="btn btn-primary" name="update">Update</button>
-	<button type="submit" class="btn" name="cancel">Cancel</button>
+	<button type="submit" class="btn btn-primary" name="cancel" align="right">Cancel</button>
+</div>
+	</td>
+</tr>
 
+</table>
 </form> 
