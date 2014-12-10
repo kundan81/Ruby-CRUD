@@ -1,5 +1,5 @@
 <!-- View -->
-<form action="/add_intern" class="form-inline" method="POST">
+<form action="/add_intern" class="form-inline" method="POST" enctype="multipart/form-data">
 	
 	<strong>Name:-</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="text" placeholder="Intern Name ..." name="intern_name"> <br/><br/>
@@ -13,6 +13,12 @@
 	<strong>Working With :-</strong>&nbsp;&nbsp;&nbsp;
 	<input type="text" placeholder="Intern Working With ..." name="working_with"><br/><br/>
 
-	<button type="submit" class="btn">Add Intern</button>
+	<strong>Skills :-</strong>&nbsp;&nbsp;&nbsp;
+	<input type="textarea" placeholder="Enter your Skills" name="Skills_Added"><br/><br/>
+<div class="xs-8">
+	<strong>Picture :-</strong>&nbsp;&nbsp;&nbsp;
+	<input type="file" name="pic" accept="image/*">
+</div>		
+	<button type="submit" class="btn btn-primary" align="right">Add Intern</button>
 
 </form>
