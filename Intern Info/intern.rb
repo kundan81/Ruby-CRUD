@@ -8,7 +8,7 @@ require 'csv'
   
 set :public, File.dirname(__FILE__) + '/public'
 
-DataMapper::setup(:default,"sqlite3://#{Dir.pwd}/intern_sibu_editedfinal.db")
+DataMapper::setup(:default,"sqlite3://#{Dir.pwd}/intern_sibu_editedfinale.db")
 
 @@filename
 @@tempfile

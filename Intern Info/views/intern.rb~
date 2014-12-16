@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'data_mapper'
-require 'haml'
+#require 'haml'
 require 'csv'
 #### Changed By sibu #######
 # Controller Class
@@ -8,12 +8,8 @@ require 'csv'
   
 set :public, File.dirname(__FILE__) + '/public'
 
-DataMapper::setup(:default,"sqlite3://#{Dir.pwd}/intern_sibu_editedfinaldemo123222.db")
+DataMapper::setup(:default,"sqlite3://#{Dir.pwd}/intern_sibu_editedfinal.db")
 
-@@filename
-@@tempfile
-@@target
-@@f2
 
 class Intern
 
