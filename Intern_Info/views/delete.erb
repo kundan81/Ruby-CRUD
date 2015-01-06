@@ -1,0 +1,6 @@
+<p>Are You Sure !!!</p>
+<blockquote><p> <%= @intern.intern_name %></p></blockquote>
+<form action="/delete/<%= @intern.id %>" method="POST">
+	<button type="submit" class="btn btn-primary" name="ok">OK</button>
+	<button type="submit" class="btn" name="cancel">Cancel</button>
+</form> 
