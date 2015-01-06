@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+</head>
+	<body>
+		<div class="img">
+			<a href="/"><img src="/img/back.png" title = "Go Back" height="34px" width="34px"></a>
+		</div>	
+		<center>
+			<fieldset class="fieldset">
+				<legend>
+					<h2>Add Interns Details :~</h2>
+				</legend>
+				<form action="/add_intern" method="POST" enctype="multipart/form-data">
+					<center>
+					<table class="add_intern">
+						<tr>
+							<td>
+								<strong>	<label for = "name_id">Name:-</label>	</strong>
+							</td>
+							<td>
+								<input type="text" placeholder="Intern Name ..." name = "intern_name" id = "name_id" element.defaultValue required>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>	<label for = "profile_id">Profile:-</label>		</strong>
+							</td>
+							<td>
+								<input type="text" placeholder="Intern Profile ..." name = "profile" id = "profile_id" required/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>	<label for = "working_id">Working On:-</label>	</strong>
+							</td>
+							<td>
+								<input type="text" placeholder="Intern Working on ..." name = "working_on" id = "working_id" required/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong><label for = "skill_id">Skills:-</label></strong>
+							</td>
+							<td>
+								<textarea placeholder="Intern Skills ..." name = "skill" column = "30" row = "3" id = "skill_id" required></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong><label for = "intern_image_id">Upload Image:-</label></strong>
+							</td>
+							<td>
+								<input type = "file" name = "intern_image" accept="image/*" id = "intern_image_id" required/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button type="submit" name="add" value="add">Add Intern</button>
+							</td>
+						</tr>	
+					</table>
+					</center>
+				</form>
+			</fieldset>
+		</center>
+	</body>
+</html>

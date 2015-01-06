@@ -1,0 +1,36 @@
+## Given Block
+Given(/^I am viewing "(.*?)"$/) do |add_intern|
+  visit '/add_intern'
+end
+
+
+## When Block
+When(/^I fill in "(.*?)" with "(.*?)"$/) do |intern_name, kundan|
+  fill_in 'intern_name', :with => 'kundan'
+end
+
+When(/^I fill In "(.*?)" with "(.*?)"$/) do |profile, developer|
+  fill_in 'profile', :with => 'developer'
+end
+
+When(/^I fill In "(.*?)" with "(.*?)"$/) do |working_on, ruby|
+  fill_in 'working_on', :with => 'ruby'
+end
+
+When(/^I fill In "(.*?)" with "(.*?)"$/) do |skill, c, java, php|
+  fill_in 'skill', :with => 'c,java,php'
+end
+
+When(/^I upload in "(.*?)"$/) do |intern_image|
+  attach_file('intern_image', 'public/img/i1.jpg')
+end
+
+When(/^I click "(.*?)"$/) do |add|
+ click "add"
+end
+
+
+## Then Block
+Then(/^I am viewing index page\.$/) do
+  visit '/'
+end

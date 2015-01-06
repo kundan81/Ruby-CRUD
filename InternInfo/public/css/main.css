@@ -1,0 +1,86 @@
+.wrap{
+    min-width: 780px;
+    max-width: 1400px;
+    margin: 5px auto;
+}
+
+.header {
+    background-color:#ECCA54;
+    color: #002EB8;
+    text-align:center;
+    padding:1px;
+    border-style: groove;
+    font-family: "serif","Times New Roman", "Times";
+    font-size: 25px;
+    border-radius: 25px;
+}
+
+.navl {
+    line-height:30px;
+    background-color:#FFFFFF;
+    width:14%;
+    float:left;
+    padding:5px;	      
+}
+
+.navr {
+    line-height:30px;
+    background-color:#FFFFFF;
+    width:14%;
+    float:right;
+    padding:5px;          
+}
+
+.section {
+    width: 70%;
+    float: left;
+    background-color: #F5FFF5;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.footer {
+    background-color:#ECCA54;
+    color:#5E1DBC;
+    clear:both;
+    text-align:center;
+    padding:1px;   
+    position:relative;
+    bottom:0;
+    border-style: groove;
+    font-size: 14px;
+    border-radius: 25px;     	 
+}
+
+table.index td, th {
+    border: 1px solid green;
+}
+
+table.add_intern td, th {
+    border: 0px solid green;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+
+.img {
+    margin: 10px;
+    padding: 1px;
+    border: 1px grove #0000ff;
+    height: auto;
+    width: auto;
+}
+
+.fieldset {
+    width: 500px;
+    padding: 10px;
+    line-height: 1.8;
+    color: red;
+    border-color: green;        
+}
+
+b {
+    color: blue;
+}

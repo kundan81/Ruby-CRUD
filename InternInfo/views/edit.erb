@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+	</head>
+	<body>
+		<div class= "img">
+			<a href="/"><img src="/img/back.png" title = "Add" height="34px" width="34px"></a>	
+		</div>
+		<center>
+			<fieldset class="fieldset">
+				<legend>
+					You Are Updating <b>{ <%= @intern.intern_name %> }~</b> 
+				</legend>
+				<form action="/edit/<%= @intern.id %>" method="POST" enctype="multipart/form-data">	
+					<table class="add_intern">
+						<tr>
+							<td>
+								<strong>Name:~</strong>
+							</td>
+							<td>
+								<input type="text" value="<%= @intern.intern_name %>" name="intern_name" readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>Profile:~</strong>
+							</td>
+							<td>
+								<input type="text" value="<%= @intern.profile %>" name="profile" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>Working On:~</strong>
+							</td>
+							<td>
+								<input type="text" value="<%= @intern.working_on %>" name="working_on" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>Skills:~</strong>
+							</td>
+							<td>
+								<textarea name="working_on"><%= @intern.skill %></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>Upload Image:~</strong>
+							</td>
+							<td>
+								<div class="img">
+									<img src= <%= @intern.intern_image %> width ="120px" height ="90px" title = "<%= @intern.intern_name %>" readonly/>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<button type="submit" name="update">Update</button>
+							</td>
+						</tr>
+					</table>
+				</form> 
+			</fieldset>
+		</center>
+	</body>
+</html>

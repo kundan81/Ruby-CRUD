@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+	</head>
+	<body>
+		<div class= "img">
+			<a href="/add_intern"><img src="/img/add.png" title = "Add" height="34px" width="34px"></a>	
+		</div>
+		<center>
+			<table width="75%" class="index">
+				<tr>
+					<th>
+						<h3>Information</h3>
+					</th>
+					<th>
+						<h3>Image</h3>
+					</th>
+					<th colspan="2">
+						<h3>Action</h3>
+					</th>
+				</tr>
+				<% @interns.each do |item| %>
+				<tr align="center">
+					<td width="40%" height="45%">
+						<b>Name:~&nbsp;</b><%= item[:intern_name]%> <br/>
+						<b>Working On:~&nbsp;</b><%= item[:working_on]%> 
+					</td>
+
+					<td width="25%" height="45%">
+						<div class="img">
+								<img src= <%= item[:intern_image] %> width ="120px" height ="90px" title = "<%= item[:intern_name] %>" />
+						</div>
+					</td>
+
+					<td width="7%" height="45%">
+						<a href="/edit/<%= item[:id] %>"> 
+						<img src="/img/edit.png" text = "Add" height="34px" width="34px" title = "Edit" /d></a>
+					</td>
+					
+					<td width="8%" height="25%">
+						<a href="/delete/<%= item[:id] %>">
+						<img src="/img/delete.png" text = "Add" height="34px" width="34px" title = "Delete" /></a>
+					</td>
+				</tr>
+				<% end %>	
+			</table>
+		</center>
+	</body>
+</html>
